@@ -6,9 +6,16 @@
 	"main": "dist/old-internet-components.umd.js",
 	"module": "dist/old-internet-components.es.js",
 	"unpkg": "dist/old-internet-components.umd.js",
-	"files": [
-		"dist"
-	],
+	"files": ["dist"],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ivgtr/old-internet-components.git"
+	},
+	"author": "ivgtr <ivgtr.me@gmail.com> (https://github.com/ivgtr)",
+	"bugs": {
+		"url": "https://github.com/ivgtr/old-internet-components/issues"
+	},
+	"homepage": "https://github.com/ivgtr/old-internet-components#readme",
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build",
