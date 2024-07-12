@@ -6,12 +6,11 @@
 	"main": "dist/old-internet-components.umd.js",
 	"module": "dist/old-internet-components.es.js",
 	"unpkg": "dist/old-internet-components.umd.js",
-	"files": [
-		"dist"
-	],
+	"files": ["dist"],
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build",
+		"build:gh": "node scripts/build.cjs",
 		"preview": "vite preview",
 		"check": "svelte-check --tsconfig ./tsconfig.json && tsc -p tsconfig.node.json"
 	},
