@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>𝓞𝓛𝓓 𝓘𝓝𝓣𝓔𝓡𝓝𝓔𝓣 𝓒𝓞𝓜𝓟𝓞𝓝𝓔𝓝𝓣𝓢</title>
+    <style>
+      *:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+        all: unset;
+        display: revert;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        min-height: 100vh;
+        background-color: #f0f0f0;
+      }
+
+      h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-align: center;
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin: 0 auto;
+      }
+
+      section {
+        margin-top: 2rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <section>
+        <h1
+          style="
+            max-width: 640px;
+            width: 100%;
+            height: 10rem;
+            margin: 0 auto;
+            background: blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          <old-title>𝓞𝓛𝓓 𝓘𝓝𝓣𝓔𝓡𝓝𝓔𝓣 𝓒𝓞𝓜𝓟𝓞𝓝𝓔𝓝𝓣𝓢</old-title>
+        </h1>
+      </section>
+      <div style="width: 100%; margin: 20px auto 0; background-color: yellow">
+        <old-marquee>ようこそ</old-marquee>
+      </div>
+      <div style="width: 100%; margin: 20px auto 0">
+        <old-sorry-japanese-only />
+      </div>
+      <section>
+        <h2>アクセスカウンター</h2>
+        <div
+          style="
+            max-width: 640px;
+            width: 100%;
+            margin: 20px auto 0;
+            padding: 0 20px;
+          "
+        >
+          <old-access-counter count="7776" />
+        </div>
+      </section>
+      <section>
+        <h2>▼ エロあるよ(笑) ▼</h2>
+        <div
+          style="
+            max-width: 640px;
+            width: 100%;
+            margin: 20px auto 0;
+            padding: 0 20px;
+          "
+        >
+          <old-link
+            href="https://dic.nicovideo.jp/a/%E3%82%A8%E3%83%AD%E3%81%82%E3%82%8B%E3%82%88%28%E7%AC%91%29"
+            target="_blank"
+          ></old-link>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+    <script>
+      const count = Math.floor(Math.random() * 10000);
+      const counter = document.querySelector("old-access-counter");
+      counter.setAttribute("count", count);
+    </script>
+  </body>
+</html>
