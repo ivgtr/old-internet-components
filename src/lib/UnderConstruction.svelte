@@ -1,9 +1,9 @@
 <svelte:options customElement="old-under-construction" />
 
 <script lang="ts">
-  export let variant = "classic"; // "classic" | "animated" | "neon"
-  export let message = "工事中";
-  export let showIcon = true;
+export let variant = "classic"; // "classic" | "animated" | "neon"
+export let message = "工事中";
+export let showIcon = true;
 </script>
 
 <div class="under-construction {variant}">

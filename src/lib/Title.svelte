@@ -1,9 +1,9 @@
 <svelte:options customElement="old-title" />
 
 <script lang="ts">
-  export let blink = true;
-  export let shadow = true;
-  export let color = "#ff0080";
+export let blink = true;
+export let shadow = true;
+export let color = "#ff0080";
 </script>
 
 <p class="title" class:blink class:shadow>

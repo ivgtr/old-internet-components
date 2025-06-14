@@ -1,10 +1,10 @@
 <svelte:options customElement="old-blink" />
 
 <script lang="ts">
-  export let speed = 1000; // milliseconds
-  export let color = "#ff0000";
-  export let size = "1rem";
-  export let bold = true;
+export let speed = 1000; // milliseconds
+export let color = "#ff0000";
+export let size = "1rem";
+export let bold = true;
 </script>
 
 <span class="blink-text" class:bold style="color: {color}; font-size: {size}; animation-duration: {speed}ms;">
