@@ -154,7 +154,7 @@
           </div>
           <button
             class="copy-button"
-            onclick="copyToClipboard('&lt;old-title color=&quot;#ff0080&quot; blink=&quot;true&quot; shadow=&quot;true&quot;&gt;サンプルタイトル&lt;/old-title&gt;')"
+            onclick="copyToClipboard('&lt;old-title color=&quot;#ff0080&quot; blink=&quot;true&quot; shadow=&quot;true&quot;&gt;サンプルタイトル&lt;/old-title&gt;', event)"
           >
             コピー
           </button>
@@ -179,7 +179,7 @@
           </div>
           <button
             class="copy-button"
-            onclick="copyToClipboard('&lt;old-marquee scrollamount=&quot;200&quot;&gt;流れるテキストのサンプルです&lt;/old-marquee&gt;')"
+            onclick="copyToClipboard('&lt;old-marquee scrollamount=&quot;200&quot;&gt;流れるテキストのサンプルです&lt;/old-marquee&gt;', event)"
           >
             コピー
           </button>
@@ -199,7 +199,7 @@
           </div>
           <button
             class="copy-button"
-            onclick="copyToClipboard('&lt;old-blink color=&quot;#ff0000&quot; size=&quot;1.2rem&quot; speed=&quot;1000&quot;&gt;点滅するテキスト&lt;/old-blink&gt;')"
+            onclick="copyToClipboard('&lt;old-blink color=&quot;#ff0000&quot; size=&quot;1.2rem&quot; speed=&quot;1000&quot;&gt;点滅するテキスト&lt;/old-blink&gt;', event)"
           >
             コピー
           </button>
@@ -218,7 +218,7 @@
           </div>
           <button
             class="copy-button"
-            onclick="copyToClipboard('&lt;old-access-counter count=&quot;7776&quot; variant=&quot;retro&quot;&gt;&lt;/old-access-counter&gt;')"
+            onclick="copyToClipboard('&lt;old-access-counter count=&quot;7776&quot; variant=&quot;retro&quot;&gt;&lt;/old-access-counter&gt;', event)"
           >
             コピー
           </button>
@@ -256,7 +256,7 @@
           </div>
           <button
             class="copy-button"
-            onclick="copyToClipboard('&lt;old-link href=&quot;https://example.com/secret&quot; n=&quot;100&quot;&gt;■&lt;/old-link&gt;')"
+            onclick="copyToClipboard('&lt;old-link href=&quot;https://example.com/secret&quot; n=&quot;100&quot;&gt;■&lt;/old-link&gt;', event)"
           >
             コピー
           </button>
@@ -275,7 +275,7 @@
           </div>
           <button
             class="copy-button"
-            onclick="copyToClipboard('&lt;old-under-construction variant=&quot;classic&quot; message=&quot;工事中です&quot;&gt;&lt;/old-under-construction&gt;')"
+            onclick="copyToClipboard('&lt;old-under-construction variant=&quot;classic&quot; message=&quot;工事中です&quot;&gt;&lt;/old-under-construction&gt;', event)"
           >
             コピー
           </button>
@@ -312,7 +312,7 @@
           <div class="component-code">&lt;old-sorry-japanese-only&gt;&lt;/old-sorry-japanese-only&gt;</div>
           <button
             class="copy-button"
-            onclick="copyToClipboard('&lt;old-sorry-japanese-only&gt;&lt;/old-sorry-japanese-only&gt;')"
+            onclick="copyToClipboard('&lt;old-sorry-japanese-only&gt;&lt;/old-sorry-japanese-only&gt;', event)"
           >
             コピー
           </button>
@@ -334,7 +334,7 @@
           </div>
           <button
             class="copy-button"
-            onclick="copyToClipboard('&lt;old-right-click-disable text=&quot;右クリックは禁止されています！&quot;&gt;&lt;/old-right-click-disable&gt;')"
+            onclick="copyToClipboard('&lt;old-right-click-disable text=&quot;右クリックは禁止されています！&quot;&gt;&lt;/old-right-click-disable&gt;', event)"
           >
             コピー
           </button>
@@ -372,7 +372,7 @@
     <script type="module" src="/src/main.ts"></script>
     <script>
       // Copy to clipboard function
-      function copyToClipboard(text) {
+      function copyToClipboard(text, event) {
         navigator.clipboard
           .writeText(text)
           .then(() => {
