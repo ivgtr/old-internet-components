@@ -14,7 +14,9 @@ export default defineConfig({
 	plugins: [
 		svelte({
 			include: ["./src/**/*.svelte"],
-			hot: true,
+			compilerOptions: {
+				hmr: true,
+			},
 		}),
 
 		reloadSettings(),
