@@ -1,12 +1,12 @@
 <svelte:options customElement="old-under-construction" />
 
 <script lang="ts">
-  export let style = "classic"; // "classic" | "animated" | "neon"
+  export let variant = "classic"; // "classic" | "animated" | "neon"
   export let message = "工事中";
   export let showIcon = true;
 </script>
 
-<div class="under-construction {style}">
+<div class="under-construction {variant}">
   {#if showIcon}
     <div class="icon">
       🚧
@@ -18,7 +18,7 @@
   <div class="sub-message">
     Under Construction
   </div>
-  {#if style === "animated"}
+  {#if variant === "animated"}
     <div class="animated-bars">
       <div class="bar"></div>
       <div class="bar"></div>

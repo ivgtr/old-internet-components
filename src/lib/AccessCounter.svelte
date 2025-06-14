@@ -2,13 +2,13 @@
 
 <script lang="ts">
   export let count = "0";
-  export let style = "retro"; // "retro" | "digital" | "classic"
+  export let variant = "retro"; // "retro" | "digital" | "classic"
   
   $: countStr = count.toString().padStart(6, "0");
   $: digits = countStr.split("");
 </script>
 
-<div class="access-counter {style}">
+<div class="access-counter {variant}">
   <p class="counter">
     あなたは
     <span class="digit-container">
