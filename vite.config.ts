@@ -1,5 +1,5 @@
-import { defineConfig } from "vite";
 import { svelte } from "@sveltejs/vite-plugin-svelte";
+import { defineConfig } from "vite";
 import reloadSettings from "./vite-plugins/reloadSettings";
 
 // https://vitejs.dev/config/
@@ -7,7 +7,7 @@ export default defineConfig({
 	build: {
 		lib: {
 			entry: "./src/main.ts",
-			name: "MyLibrary",
+			name: "OldInternetComponents",
 			fileName: (format) => `old-internet-components.${format}.js`,
 		},
 	},
@@ -15,7 +15,7 @@ export default defineConfig({
 		svelte({
 			include: ["./src/**/*.svelte"],
 			compilerOptions: {
-				hmr: true,
+				customElement: true,
 			},
 		}),
 
