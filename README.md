@@ -30,126 +30,60 @@ npm install old-internet-components
 
 ## 🎨 Components Gallery
 
-<table>
-  <tr>
-    <td width="33%">
-
 ### 🏷️ `<old-title>`
 ```html
-<old-title color="#ff0080" blink="true" shadow="true">
-  サンプルタイトル
-</old-title>
+<old-title color="#ff0080" blink="true" shadow="true">サンプルタイトル</old-title>
 ```
-
-    </td>
-    <td width="33%">
 
 ### 📜 `<old-marquee>`
 ```html
-<old-marquee scrollamount="200">
-  流れるテキスト
-</old-marquee>
+<old-marquee scrollamount="200">流れるテキスト</old-marquee>
 ```
-
-    </td>
-    <td width="33%">
 
 ### ✨ `<old-blink>`
 ```html
-<old-blink color="#ff0000" speed="1000">
-  点滅テキスト
-</old-blink>
+<old-blink color="#ff0000" speed="1000">点滅テキスト</old-blink>
 ```
-
-    </td>
-  </tr>
-  <tr>
-    <td>
 
 ### 🔢 `<old-access-counter>`
 ```html
-<old-access-counter 
-  count="7776" 
-  variant="retro">
-</old-access-counter>
+<old-access-counter count="7776" variant="retro"></old-access-counter>
 ```
-> Variants: `retro` | `digital` | `classic`
-
-    </td>
-    <td>
+**Variants:** `retro` • `digital` • `classic`
 
 ### 🔗 `<old-link>`
 ```html
-<old-link 
-  href="https://example.com" 
-  n="100">
-  ■
-</old-link>
+<old-link href="https://example.com" n="100">■</old-link>
 ```
-> Hidden link game
-
-    </td>
-    <td>
+*Hidden link game - find the real one!*
 
 ### 🚧 `<old-under-construction>`
 ```html
-<old-under-construction 
-  variant="classic" 
-  message="工事中です">
-</old-under-construction>
+<old-under-construction variant="classic" message="工事中です"></old-under-construction>
 ```
-> Variants: `classic` | `animated` | `neon`
-
-    </td>
-  </tr>
-  <tr>
-    <td>
+**Variants:** `classic` • `animated` • `neon`
 
 ### 🇯🇵 `<old-sorry-japanese-only>`
 ```html
-<old-sorry-japanese-only>
-</old-sorry-japanese-only>
+<old-sorry-japanese-only></old-sorry-japanese-only>
 ```
-
-    </td>
-    <td>
 
 ### 🚫 `<old-right-click-disable>`
 ```html
-<old-right-click-disable 
-  text="右クリック禁止！">
-</old-right-click-disable>
+<old-right-click-disable text="右クリック禁止！"></old-right-click-disable>
 ```
-
-    </td>
-    <td></td>
-  </tr>
-</table>
 
 ---
 
 ## 💻 Framework Support
 
-<table>
-  <tr>
-    <th>Framework</th>
-    <th>Setup</th>
-  </tr>
-  <tr>
-    <td><strong>Vanilla HTML</strong></td>
-    <td>
-
+### 🌐 Vanilla HTML
 ```html
 <script src="https://unpkg.com/old-internet-components@latest/dist/old-internet-components.umd.js"></script>
 <old-title>Hello World</old-title>
 ```
 
-    </td>
-  </tr>
-  <tr>
-    <td><strong>React / Next.js</strong></td>
-    <td>
-
+### ⚛️ React / Next.js
 ```tsx
 // types.d.ts
 declare namespace JSX {
@@ -159,30 +93,16 @@ declare namespace JSX {
 }
 ```
 
-    </td>
-  </tr>
-  <tr>
-    <td><strong>Vue.js</strong></td>
-    <td>
-
+### 💚 Vue.js
 ```js
 import 'old-internet-components';
 ```
 
-    </td>
-  </tr>
-  <tr>
-    <td><strong>Angular</strong></td>
-    <td>
-
+### 🅰️ Angular
 ```ts
 // app.module.ts
 schemas: [CUSTOM_ELEMENTS_SCHEMA]
 ```
-
-    </td>
-  </tr>
-</table>
 
 ---
 
