@@ -1,159 +1,226 @@
+<div align="center">
+
 # 𝓞𝓛𝓓 𝓘𝓝𝓣𝓔𝓡𝓝𝓔𝓣 𝓒𝓞𝓜𝓟𝓞𝓝𝓔𝓝𝓣𝓢
 
-A collection of nostalgic web components that recreate the classic 1990s Japanese personal website aesthetic. Built with Svelte and distributed as Web Components for universal compatibility.
+🌐 **[Live Demo](https://ivgtr.github.io/old-internet-components/)** | 📦 **[NPM Package](https://npmjs.com/package/old-internet-components)**
 
-## 🌐 Demo
+*Nostalgic Web Components for 90s Japanese Website Aesthetics*
 
-[https://ivgtr.github.io/old-internet-components/](https://ivgtr.github.io/old-internet-components/)
+[![npm version](https://img.shields.io/npm/v/old-internet-components.svg)](https://npmjs.com/package/old-internet-components)
+[![GitHub stars](https://img.shields.io/github/stars/ivgtr/old-internet-components.svg)](https://github.com/ivgtr/old-internet-components)
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-## 📦 Installation
+</div>
 
-### CDN (Recommended)
+---
 
+## 🚀 Quick Start
+
+### CDN
 ```html
 <script src="https://unpkg.com/old-internet-components@latest/dist/old-internet-components.umd.js"></script>
 ```
 
 ### NPM
-
 ```bash
 npm install old-internet-components
 ```
 
-```javascript
-import 'old-internet-components';
-```
+---
 
-## 🎨 Components
+## 🎨 Components Gallery
 
-### `<old-title>`
-Nostalgic title text with blinking and shadow effects
+<table>
+  <tr>
+    <td width="33%">
+
+### 🏷️ `<old-title>`
 ```html
-<old-title color="#ff0080" blink="true" shadow="true">サンプルタイトル</old-title>
+<old-title color="#ff0080" blink="true" shadow="true">
+  サンプルタイトル
+</old-title>
 ```
 
-### `<old-marquee>`
-Classic scrolling text
+    </td>
+    <td width="33%">
+
+### 📜 `<old-marquee>`
 ```html
-<old-marquee scrollamount="200">流れるテキストのサンプルです</old-marquee>
+<old-marquee scrollamount="200">
+  流れるテキスト
+</old-marquee>
 ```
 
-### `<old-blink>`
-Blinking text effect
+    </td>
+    <td width="33%">
+
+### ✨ `<old-blink>`
 ```html
-<old-blink color="#ff0000" size="1.2rem" speed="1000">点滅するテキスト</old-blink>
+<old-blink color="#ff0000" speed="1000">
+  点滅テキスト
+</old-blink>
 ```
 
-### `<old-access-counter>`
-Retro access counter with multiple styles
+    </td>
+  </tr>
+  <tr>
+    <td>
+
+### 🔢 `<old-access-counter>`
 ```html
-<old-access-counter count="7776" variant="retro"></old-access-counter>
+<old-access-counter 
+  count="7776" 
+  variant="retro">
+</old-access-counter>
 ```
+> Variants: `retro` | `digital` | `classic`
 
-**Variants:** `retro`, `digital`, `classic`
+    </td>
+    <td>
 
-### `<old-link>`
-Hidden link game - find the real link among decoys
+### 🔗 `<old-link>`
 ```html
-<old-link href="https://example.com/secret" n="100">■</old-link>
+<old-link 
+  href="https://example.com" 
+  n="100">
+  ■
+</old-link>
 ```
+> Hidden link game
 
-### `<old-under-construction>`
-Classic "under construction" display
+    </td>
+    <td>
+
+### 🚧 `<old-under-construction>`
 ```html
-<old-under-construction variant="classic" message="工事中です"></old-under-construction>
+<old-under-construction 
+  variant="classic" 
+  message="工事中です">
+</old-under-construction>
 ```
+> Variants: `classic` | `animated` | `neon`
 
-**Variants:** `classic`, `animated`, `neon`
+    </td>
+  </tr>
+  <tr>
+    <td>
 
-### `<old-sorry-japanese-only>`
-"Japanese only" message
+### 🇯🇵 `<old-sorry-japanese-only>`
 ```html
-<old-sorry-japanese-only></old-sorry-japanese-only>
+<old-sorry-japanese-only>
+</old-sorry-japanese-only>
 ```
 
-### `<old-right-click-disable>`
-Right-click prevention with retro alert
+    </td>
+    <td>
+
+### 🚫 `<old-right-click-disable>`
 ```html
-<old-right-click-disable text="右クリックは禁止されています！"></old-right-click-disable>
+<old-right-click-disable 
+  text="右クリック禁止！">
+</old-right-click-disable>
 ```
 
-## 🚀 Usage
+    </td>
+    <td></td>
+  </tr>
+</table>
 
-All components work as standard Web Components and can be used in any HTML page or framework:
+---
+
+## 💻 Framework Support
+
+<table>
+  <tr>
+    <th>Framework</th>
+    <th>Setup</th>
+  </tr>
+  <tr>
+    <td><strong>Vanilla HTML</strong></td>
+    <td>
 
 ```html
-<!DOCTYPE html>
-<html>
-<head>
-    <script src="https://unpkg.com/old-internet-components@latest/dist/old-internet-components.umd.js"></script>
-</head>
-<body>
-    <old-title color="#ff0080" blink="true">Welcome to my homepage!</old-title>
-    <old-marquee>This is a scrolling message</old-marquee>
-    <old-access-counter count="1234" variant="retro"></old-access-counter>
-</body>
-</html>
+<script src="https://unpkg.com/old-internet-components@latest/dist/old-internet-components.umd.js"></script>
+<old-title>Hello World</old-title>
 ```
 
-### Framework Integration
+    </td>
+  </tr>
+  <tr>
+    <td><strong>React / Next.js</strong></td>
+    <td>
 
-**React/Next.js:**
-```jsx
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      'old-title': any;
-      'old-marquee': any;
-      // ... other components
-    }
+```tsx
+// types.d.ts
+declare namespace JSX {
+  interface IntrinsicElements {
+    'old-title': any;
   }
 }
 ```
 
-**Vue.js:**
-```javascript
-// In main.js or component
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Vue.js</strong></td>
+    <td>
+
+```js
 import 'old-internet-components';
 ```
 
-**Angular:**
-Add `CUSTOM_ELEMENTS_SCHEMA` to your module.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Angular</strong></td>
+    <td>
+
+```ts
+// app.module.ts
+schemas: [CUSTOM_ELEMENTS_SCHEMA]
+```
+
+    </td>
+  </tr>
+</table>
+
+---
 
 ## 🎭 Design Philosophy
 
-These components recreate the authentic feel of 1990s Japanese personal websites:
+<div align="center">
 
-- **MS Gothic font family** for that classic monospace look
-- **Retro color schemes** with Web 1.0 aesthetics  
-- **Authentic animations** like blinking text and scrolling marquees
-- **Classic UI elements** with outset/inset borders and gradients
-- **Nostalgic functionality** like access counters and "under construction" signs
+| Feature | Description |
+|---------|-------------|
+| 🖼️ **MS Gothic Font** | Authentic Japanese monospace |
+| 🌈 **Web 1.0 Colors** | Classic 90s color schemes |
+| ✨ **Retro Animations** | Blinking, scrolling, glowing |
+| 🔲 **Classic UI** | Outset borders & gradients |
+| 📟 **Nostalgic Elements** | Access counters, construction signs |
+
+</div>
+
+---
 
 ## 🛠️ Development
 
 ```bash
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-
-# Build for production
-npm run build
-
-# Type check
-npm run check
+npm install    # Install dependencies
+npm run dev    # Start dev server  
+npm run build  # Build for production
+npm run check  # Type checking
 ```
-
-## 📄 License
-
-MIT License - feel free to use in your nostalgic web projects!
-
-## 🌸 Contributing
-
-Contributions are welcome! Please feel free to submit pull requests for additional retro components or improvements to existing ones.
 
 ---
 
-*Relive the golden age of the web with authentic 90s Japanese internet aesthetics* ✨
+<div align="center">
+
+## 📄 License
+
+**MIT** - *Build nostalgic websites freely* ✨
+
+**[⭐ Star this repo](https://github.com/ivgtr/old-internet-components)** • **[🐛 Report issues](https://github.com/ivgtr/old-internet-components/issues)** • **[🤝 Contribute](https://github.com/ivgtr/old-internet-components/pulls)**
+
+*Relive the golden age of the Japanese web* 🌸
+
+</div>
