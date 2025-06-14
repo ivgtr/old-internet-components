@@ -83,43 +83,6 @@ npm install old-internet-components
 <old-title>Hello World</old-title>
 ```
 
-### ⚛️ React / Next.js
-```tsx
-// types.d.ts
-declare namespace JSX {
-  interface IntrinsicElements {
-    'old-title': any;
-  }
-}
-```
-
-### 💚 Vue.js
-```js
-import 'old-internet-components';
-```
-
-### 🅰️ Angular
-```ts
-// app.module.ts
-schemas: [CUSTOM_ELEMENTS_SCHEMA]
-```
-
----
-
-## 🎭 Design Philosophy
-
-<div align="center">
-
-| Feature | Description |
-|---------|-------------|
-| 🖼️ **MS Gothic Font** | Authentic Japanese monospace |
-| 🌈 **Web 1.0 Colors** | Classic 90s color schemes |
-| ✨ **Retro Animations** | Blinking, scrolling, glowing |
-| 🔲 **Classic UI** | Outset borders & gradients |
-| 📟 **Nostalgic Elements** | Access counters, construction signs |
-
-</div>
-
 ---
 
 ## 🛠️ Development
