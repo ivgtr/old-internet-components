@@ -17,11 +17,17 @@
       }
 
       body {
-        font-family: Arial, sans-serif;
+        font-family: "MS ゴシック", "MS Gothic", Arial, sans-serif;
         margin: 0;
         padding: 0;
         width: 100%;
         min-height: 100vh;
+        background: linear-gradient(45deg, #e0e0e0 25%, transparent 25%),
+          linear-gradient(-45deg, #e0e0e0 25%, transparent 25%),
+          linear-gradient(45deg, transparent 75%, #e0e0e0 75%),
+          linear-gradient(-45deg, transparent 75%, #e0e0e0 75%);
+        background-size: 20px 20px;
+        background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
         background-color: #f0f0f0;
       }
 
@@ -47,68 +53,346 @@
       section {
         margin-top: 2rem;
       }
+
+      .component-demo {
+        border: 2px solid #c0c0c0;
+        margin: 1rem 0;
+        background: #f8f8f8;
+      }
+
+      .component-header {
+        background: #e0e0e0;
+        padding: 0.5rem 1rem;
+        border-bottom: 1px solid #c0c0c0;
+        font-family: "MS ゴシック", monospace;
+        font-weight: bold;
+        color: #000080;
+      }
+
+      .component-preview {
+        padding: 1rem;
+        border-bottom: 1px solid #c0c0c0;
+      }
+
+      .component-code {
+        background: #000;
+        color: #00ff00;
+        padding: 1rem;
+        font-family: "Courier New", monospace;
+        font-size: 0.9rem;
+        overflow-x: auto;
+      }
+
+      .copy-button {
+        background: #c0c0c0;
+        border: 2px outset #c0c0c0;
+        padding: 0.3rem 0.8rem;
+        font-family: "MS ゴシック", monospace;
+        cursor: pointer;
+        margin: 0.5rem;
+      }
+
+      .copy-button:hover {
+        background: #e0e0e0;
+      }
+
+      .copy-button:active {
+        border: 2px inset #c0c0c0;
+      }
     </style>
   </head>
 
   <body>
     <main>
+      <!-- Header -->
       <section>
-        <h1
+        <div
           style="
-            max-width: 640px;
+            max-width: 800px;
             width: 100%;
-            height: 10rem;
+            height: 8rem;
             margin: 0 auto;
-            background: blue;
+            background: linear-gradient(45deg, #0000ff, #8a2be2);
+            border: 3px outset #c0c0c0;
             display: flex;
             justify-content: center;
             align-items: center;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
           "
         >
-          <old-title>𝓞𝓛𝓓 𝓘𝓝𝓣𝓔𝓡𝓝𝓔𝓣 𝓒𝓞𝓜𝓟𝓞𝓝𝓔𝓝𝓣𝓢</old-title>
-        </h1>
-      </section>
-      <div style="width: 100%; margin: 20px auto 0; background-color: yellow">
-        <old-marquee>ようこそ</old-marquee>
-      </div>
-      <div style="width: 100%; margin: 20px auto 0">
-        <old-sorry-japanese-only />
-      </div>
-      <section>
-        <h2>アクセスカウンター</h2>
+          <old-title color="#ffff00" blink="true" shadow="true"
+            >OLD INTERNET COMPONENTS</old-title
+          >
+        </div>
         <div
           style="
-            max-width: 640px;
-            width: 100%;
-            margin: 20px auto 0;
-            padding: 0 20px;
+            text-align: center;
+            margin-top: 1rem;
+            font-family: 'MS ゴシック', monospace;
+            color: #666;
           "
         >
-          <old-access-counter count="7776" />
+          あの時のインターネットWebComponentsライブラリ
         </div>
       </section>
-      <section>
-        <h2>▼ エロあるよ(笑) ▼</h2>
-        <div
-          style="
-            max-width: 640px;
-            width: 100%;
-            margin: 20px auto 0;
-            padding: 0 20px;
-          "
-        >
-          <old-link
-            href="https://dic.nicovideo.jp/a/%E3%82%A8%E3%83%AD%E3%81%82%E3%82%8B%E3%82%88%28%E7%AC%91%29"
-            target="_blank"
-          ></old-link>
+
+      <!-- Component Catalog -->
+      <div style="max-width: 800px; margin: 2rem auto; padding: 0 20px">
+        <!-- old-title -->
+        <div class="component-demo">
+          <div class="component-header">
+            &lt;old-title&gt; - タイトルコンポーネント
+          </div>
+          <div class="component-preview">
+            <old-title color="#ff0080" blink="true" shadow="true"
+              >サンプルタイトル</old-title
+            >
+          </div>
+          <div class="component-code">
+            &lt;old-title color="#ff0080" blink="true"
+            shadow="true"&gt;サンプルタイトル&lt;/old-title&gt;
+          </div>
+          <button
+            class="copy-button"
+            onclick="copyToClipboard('&lt;old-title color=&quot;#ff0080&quot; blink=&quot;true&quot; shadow=&quot;true&quot;&gt;サンプルタイトル&lt;/old-title&gt;')"
+          >
+            コピー
+          </button>
         </div>
-      </section>
+
+        <!-- old-marquee -->
+        <div class="component-demo">
+          <div class="component-header">
+            &lt;old-marquee&gt; - スクロールテキスト
+          </div>
+          <div
+            class="component-preview"
+            style="background: #ffff00; border: 2px solid #000"
+          >
+            <old-marquee scrollamount="200"
+              >流れるテキストのサンプルです</old-marquee
+            >
+          </div>
+          <div class="component-code">
+            &lt;old-marquee
+            scrollamount="200"&gt;流れるテキストのサンプルです&lt;/old-marquee&gt;
+          </div>
+          <button
+            class="copy-button"
+            onclick="copyToClipboard('&lt;old-marquee scrollamount=&quot;200&quot;&gt;流れるテキストのサンプルです&lt;/old-marquee&gt;')"
+          >
+            コピー
+          </button>
+        </div>
+
+        <!-- old-blink -->
+        <div class="component-demo">
+          <div class="component-header">&lt;old-blink&gt; - 点滅テキスト</div>
+          <div class="component-preview">
+            <old-blink color="#ff0000" size="1.2rem" speed="1000"
+              >点滅するテキスト</old-blink
+            >
+          </div>
+          <div class="component-code">
+            &lt;old-blink color="#ff0000" size="1.2rem"
+            speed="1000"&gt;点滅するテキスト&lt;/old-blink&gt;
+          </div>
+          <button
+            class="copy-button"
+            onclick="copyToClipboard('&lt;old-blink color=&quot;#ff0000&quot; size=&quot;1.2rem&quot; speed=&quot;1000&quot;&gt;点滅するテキスト&lt;/old-blink&gt;')"
+          >
+            コピー
+          </button>
+        </div>
+
+        <!-- old-access-counter -->
+        <div class="component-demo">
+          <div class="component-header">
+            &lt;old-access-counter&gt; - アクセスカウンター
+          </div>
+          <div class="component-preview">
+            <old-access-counter count="7776" style="retro" />
+          </div>
+          <div class="component-code">
+            &lt;old-access-counter count="7776" style="retro" /&gt;
+          </div>
+          <button
+            class="copy-button"
+            onclick="copyToClipboard('&lt;old-access-counter count=&quot;7776&quot; style=&quot;retro&quot; /&gt;')"
+          >
+            コピー
+          </button>
+
+          <div style="margin-top: 1rem">
+            <div
+              style="
+                font-family: 'MS ゴシック', monospace;
+                font-weight: bold;
+                margin-bottom: 0.5rem;
+              "
+            >
+              スタイルバリエーション:
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 1rem">
+              <old-access-counter count="1234" style="retro" />
+              <old-access-counter count="5678" style="digital" />
+              <old-access-counter count="9999" style="classic" />
+            </div>
+          </div>
+        </div>
+
+        <!-- old-link -->
+        <div class="component-demo">
+          <div class="component-header">&lt;old-link&gt; - ダミーリンク群</div>
+          <div class="component-preview">
+            <div style="font-size: 0.9rem; margin-bottom: 1rem; color: #666">
+              100個の青い■の中に1つだけ本物のリンクが隠れています
+            </div>
+            <old-link href="https://example.com/secret" n="100">■</old-link>
+          </div>
+          <div class="component-code">
+            &lt;old-link href="https://example.com/secret"
+            n="100"&gt;■&lt;/old-link&gt;
+          </div>
+          <button
+            class="copy-button"
+            onclick="copyToClipboard('&lt;old-link href=&quot;https://example.com/secret&quot; n=&quot;100&quot;&gt;■&lt;/old-link&gt;')"
+          >
+            コピー
+          </button>
+        </div>
+
+        <!-- old-under-construction -->
+        <div class="component-demo">
+          <div class="component-header">
+            &lt;old-under-construction&gt; - 工事中表示
+          </div>
+          <div class="component-preview">
+            <old-under-construction style="classic" message="工事中です" />
+          </div>
+          <div class="component-code">
+            &lt;old-under-construction style="classic" message="工事中です"
+            /&gt;
+          </div>
+          <button
+            class="copy-button"
+            onclick="copyToClipboard('&lt;old-under-construction style=&quot;classic&quot; message=&quot;工事中です&quot; /&gt;')"
+          >
+            コピー
+          </button>
+
+          <div style="margin-top: 1rem">
+            <div
+              style="
+                font-family: 'MS ゴシック', monospace;
+                font-weight: bold;
+                margin-bottom: 0.5rem;
+              "
+            >
+              スタイルバリエーション:
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 1rem">
+              <old-under-construction style="classic" message="クラシック" />
+              <old-under-construction
+                style="animated"
+                message="アニメーション"
+              />
+              <old-under-construction style="neon" message="ネオン" />
+            </div>
+          </div>
+        </div>
+
+        <!-- old-sorry-japanese-only -->
+        <div class="component-demo">
+          <div class="component-header">
+            &lt;old-sorry-japanese-only&gt; - 日本語のみ表示
+          </div>
+          <div class="component-preview">
+            <old-sorry-japanese-only />
+          </div>
+          <div class="component-code">&lt;old-sorry-japanese-only /&gt;</div>
+          <button
+            class="copy-button"
+            onclick="copyToClipboard('&lt;old-sorry-japanese-only /&gt;')"
+          >
+            コピー
+          </button>
+        </div>
+
+        <!-- old-right-click-disable -->
+        <div class="component-demo">
+          <div class="component-header">
+            &lt;old-right-click-disable&gt; - 右クリック禁止
+          </div>
+          <div class="component-preview">
+            <div style="font-size: 0.9rem; color: #666">
+              このページで右クリックを試してみてください
+            </div>
+            <old-right-click-disable text="右クリックは禁止されています！" />
+          </div>
+          <div class="component-code">
+            &lt;old-right-click-disable text="右クリックは禁止されています！"
+            /&gt;
+          </div>
+          <button
+            class="copy-button"
+            onclick="copyToClipboard('&lt;old-right-click-disable text=&quot;右クリックは禁止されています！&quot; /&gt;')"
+          >
+            コピー
+          </button>
+        </div>
+
+        <!-- Footer -->
+        <footer style="margin-top: 3rem; padding: 2rem 0; border-top: 2px solid #c0c0c0; background: #f0f0f0;">
+          <div style="text-align: center; font-family: 'MS ゴシック', monospace;">
+            <div style="margin-bottom: 1rem;">
+              <a href="https://github.com/tenori/old-internet-components" target="_blank" rel="noopener noreferrer" 
+                 style="
+                   background: #c0c0c0; 
+                   border: 2px outset #c0c0c0; 
+                   padding: 0.5rem 1rem; 
+                   color: #000080; 
+                   text-decoration: none; 
+                   font-weight: bold;
+                   display: inline-block;
+                 "
+                 onmouseover="this.style.background='#e0e0e0'; this.style.border='2px inset #c0c0c0';"
+                 onmouseout="this.style.background='#c0c0c0'; this.style.border='2px outset #c0c0c0';">
+                <old-blink color="#ff0000" size="0.9rem">★</old-blink> GitHub Repository <old-blink color="#ff0000" size="0.9rem">★</old-blink>
+              </a>
+            </div>
+            <div style="color: #666; font-size: 0.9rem;">
+              <old-blink color="#000080" speed="2000">©</old-blink> 2024 Old Internet Components Library
+            </div>
+            <div style="color: #999; font-size: 0.8rem; margin-top: 0.5rem;">
+              あの頃のインターネットを再現するWebComponentsライブラリ
+            </div>
+          </div>
+        </footer>
+      </div>
     </main>
     <script type="module" src="/src/main.ts"></script>
     <script>
-      const count = Math.floor(Math.random() * 10000);
-      const counter = document.querySelector("old-access-counter");
-      counter.setAttribute("count", count);
+      // Copy to clipboard function
+      function copyToClipboard(text) {
+        navigator.clipboard
+          .writeText(text)
+          .then(() => {
+            // Show feedback
+            const button = event.target;
+            const originalText = button.textContent;
+            button.textContent = "コピー完了!";
+            button.style.backgroundColor = "#90ee90";
+            setTimeout(() => {
+              button.textContent = originalText;
+              button.style.backgroundColor = "#c0c0c0";
+            }, 1000);
+          })
+          .catch((err) => {
+            console.error("コピーに失敗しました:", err);
+            alert("コピーに失敗しました");
+          });
+      }
     </script>
   </body>
 </html>

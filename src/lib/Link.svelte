@@ -16,15 +16,24 @@
   }[] = [];
 
   onMount(() => {
-    links = Array(n).fill({ href: "https://www.yahoo.co.jp/", target, rel });
-    // ランダムな要素を正規のURLに入れ替える
-    links[Math.floor(Math.random() * n)] = { href, target, rel };
+    // 全てダミーリンク（Yahoo!）で埋める
+    const newLinks = [];
+    for (let i = 0; i < n; i++) {
+      newLinks.push({ 
+        href: "https://www.yahoo.co.jp/", 
+        target, 
+        rel 
+      });
+    }
+    // ランダムな位置に本物のリンクを1つだけ配置
+    newLinks[Math.floor(Math.random() * n)] = { href, target, rel };
+    links = newLinks;
   });
 </script>
 
 <div class="links">
-  {#each links as { href, target, rel }, i}
-    <a {href} {target} {rel}></a>
+  {#each links as link}
+    <a href={link.href} target={link.target} rel={link.rel}>■</a>
   {/each}
 </div>
 
@@ -38,15 +47,27 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 0.2rem;
 
     a {
+      display: inline-block;
       background-color: #1a0dab;
-      padding: 0.5rem;
+      color: #1a0dab;
       text-decoration: none;
+      font-size: 0.8rem;
+      line-height: 1;
+      width: 12px;
+      height: 12px;
+      text-align: center;
 
       &:visited {
         background-color: #681da8;
+        color: #681da8;
+      }
+
+      &:hover {
+        background-color: #0000ee;
+        color: #0000ee;
       }
     }
   }
