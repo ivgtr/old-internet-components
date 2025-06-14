@@ -1,7 +1,13 @@
 <svelte:options customElement="old-title" />
 
-<p class="title">
-  <span>
+<script lang="ts">
+  export let blink = true;
+  export let shadow = true;
+  export let color = "#ff0080";
+</script>
+
+<p class="title" class:blink class:shadow>
+  <span style="color: {color}">
     <slot />
   </span>
 </p>
@@ -13,25 +19,35 @@
   }
 
   .title {
+    text-align: center;
+    
     span {
-      font-size: 1.5rem;
-      // 文字色を虹色に
-      background: linear-gradient(
-        90deg,
-        #f00,
-        #ff0,
-        #0f0,
-        #0ff,
-        #00f,
-        #f0f,
-        #f00
-      );
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      font-style: italic;
-      -webkit-text-stroke: 1px #fff;
-      text-stroke: 1px #fff;
+      font-size: 1.8rem;
+      font-weight: bold;
+      font-family: "MS ゴシック", "MS Gothic", monospace;
+      display: inline-block;
+      position: relative;
+    }
+
+    &.shadow span {
+      text-shadow: 
+        2px 2px 0px #000,
+        4px 4px 0px #666,
+        6px 6px 8px rgba(0,0,0,0.3);
+      transform: perspective(500px) rotateX(15deg);
+    }
+
+    &.blink span {
+      animation: blink-animation 1.5s steps(2, start) infinite;
+    }
+  }
+
+  @keyframes blink-animation {
+    0%, 50% {
+      opacity: 1;
+    }
+    51%, 100% {
+      opacity: 0;
     }
   }
 </style>
