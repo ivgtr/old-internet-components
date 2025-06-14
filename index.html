@@ -154,7 +154,7 @@
           </div>
           <button
             class="copy-button"
-            onclick="copyToClipboard('&lt;old-title color=&quot;#ff0080&quot; blink=&quot;true&quot; shadow=&quot;true&quot;&gt;サンプルタイトル&lt;/old-title&gt;')"
+            onclick="copyToClipboard('&lt;old-title color=&quot;#ff0080&quot; blink=&quot;true&quot; shadow=&quot;true&quot;&gt;サンプルタイトル&lt;/old-title&gt;', this)"
           >
             コピー
           </button>
@@ -179,7 +179,7 @@
           </div>
           <button
             class="copy-button"
-            onclick="copyToClipboard('&lt;old-marquee scrollamount=&quot;200&quot;&gt;流れるテキストのサンプルです&lt;/old-marquee&gt;')"
+            onclick="copyToClipboard('&lt;old-marquee scrollamount=&quot;200&quot;&gt;流れるテキストのサンプルです&lt;/old-marquee&gt;', this)"
           >
             コピー
           </button>
@@ -199,7 +199,7 @@
           </div>
           <button
             class="copy-button"
-            onclick="copyToClipboard('&lt;old-blink color=&quot;#ff0000&quot; size=&quot;1.2rem&quot; speed=&quot;1000&quot;&gt;点滅するテキスト&lt;/old-blink&gt;')"
+            onclick="copyToClipboard('&lt;old-blink color=&quot;#ff0000&quot; size=&quot;1.2rem&quot; speed=&quot;1000&quot;&gt;点滅するテキスト&lt;/old-blink&gt;', this)"
           >
             コピー
           </button>
@@ -218,7 +218,7 @@
           </div>
           <button
             class="copy-button"
-            onclick="copyToClipboard('&lt;old-access-counter count=&quot;7776&quot; variant=&quot;retro&quot; /&gt;')"
+            onclick="copyToClipboard('&lt;old-access-counter count=&quot;7776&quot; variant=&quot;retro&quot; /&gt;', this)"
           >
             コピー
           </button>
@@ -256,7 +256,7 @@
           </div>
           <button
             class="copy-button"
-            onclick="copyToClipboard('&lt;old-link href=&quot;https://example.com/secret&quot; n=&quot;100&quot;&gt;■&lt;/old-link&gt;')"
+            onclick="copyToClipboard('&lt;old-link href=&quot;https://example.com/secret&quot; n=&quot;100&quot;&gt;■&lt;/old-link&gt;', this)"
           >
             コピー
           </button>
@@ -276,7 +276,7 @@
           </div>
           <button
             class="copy-button"
-            onclick="copyToClipboard('&lt;old-under-construction variant=&quot;classic&quot; message=&quot;工事中です&quot; /&gt;')"
+            onclick="copyToClipboard('&lt;old-under-construction variant=&quot;classic&quot; message=&quot;工事中です&quot; /&gt;', this)"
           >
             コピー
           </button>
@@ -313,7 +313,7 @@
           <div class="component-code">&lt;old-sorry-japanese-only /&gt;</div>
           <button
             class="copy-button"
-            onclick="copyToClipboard('&lt;old-sorry-japanese-only /&gt;')"
+            onclick="copyToClipboard('&lt;old-sorry-japanese-only /&gt;', this)"
           >
             コピー
           </button>
@@ -336,7 +336,7 @@
           </div>
           <button
             class="copy-button"
-            onclick="copyToClipboard('&lt;old-right-click-disable text=&quot;右クリックは禁止されています！&quot; /&gt;')"
+            onclick="copyToClipboard('&lt;old-right-click-disable text=&quot;右クリックは禁止されています！&quot; /&gt;', this)"
           >
             コピー
           </button>
@@ -374,18 +374,17 @@
     <script type="module" src="/src/main.ts"></script>
     <script>
       // Copy to clipboard function
-      function copyToClipboard(text) {
+      function copyToClipboard(text, buttonElement) {
         navigator.clipboard
           .writeText(text)
           .then(() => {
             // Show feedback
-            const button = event.target;
-            const originalText = button.textContent;
-            button.textContent = "コピー完了!";
-            button.style.backgroundColor = "#90ee90";
+            const originalText = buttonElement.textContent;
+            buttonElement.textContent = "コピー完了!";
+            buttonElement.style.backgroundColor = "#90ee90";
             setTimeout(() => {
-              button.textContent = originalText;
-              button.style.backgroundColor = "#c0c0c0";
+              buttonElement.textContent = originalText;
+              buttonElement.style.backgroundColor = "#c0c0c0";
             }, 1000);
           })
           .catch((err) => {
